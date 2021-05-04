@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <script type="text/javascript" src="/path/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="small" id="header-scroll">
+          <h1><a href="#">JETLIC</a></h1>
+          <nav>
+            <ul>
+              <!-- <li><a href="#1">JETLIC</a></li> -->
+              <li><a href="#2">News</a></li>
+              <li><a href="#3">About</a></li>
+              <li><a href="#4">Project</a></li>
+              <li><a href="#5">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <section id="1" class="picture">
+        <h1 class="siro">JETLIC</h1>
+      </section>
+      <section id="2" class="top2">
+        <h1 class="top0">News</h1>
+        <p class="a">2021/5/2　　　JETLIC official homepage opened</p>
+      </section>
+      <section id="3" class="top3">
+        <h1 class="top0">About</h1>
+        <div class="title-back"></div>
+        <p>JETLIC… Student creative team</p>
+        <p>Members with too much individuality are working on manufacturing to their heart's content.</p>
+        <p>Some members study industry, others are in charge of artwork.</p>
+        <p>We are working by making the best use of our specialty, regardless of the reason We met, age, or gender.</p>
+        <a href="#" class="btn-flat-simple">
+            <i class="fa fa-caret-right"></i> Members list
+          </a>
+          <div class="vo"></div>
+        <p>Active to communicate the joy of manufacturing to children through various businesses centered on JETLIC ONE</p>
+        <p>Please keep an eye on the still developing team.</p>
+        <a href="#" class="btn-flat-simple">
+            <i class="fa fa-caret-right"></i> Support JETLIC
+          </a>
+      </section>
+      <section id="4" class="top4">
+        <h1 class="top0">Project</h1>
+        <div class="a"></div>
+        <p class="bol">JETLIC ONE</p>
+        <p>New computer creation project</p>
+        <a href="#" class="btn-flat-simple1">
+          <i class="fa fa-caret-right1"></i> JETLIC ONE Pages
+        </a>
+        <div class="a"></div>
+        <p class="bol">JETLIC Terakoya</p>
+        <p>Online computer classroom to learn together by JETLIC</p>
+        <a href="#" class="btn-flat-simple1">
+          <i class="fa fa-caret-right1"></i> JETLIC Terakoya Pages
+        </a>
+        <div class="a"></div>
+        <p class="bol">JETLIC Games</p>
+        <p>Game made by JETLIC</p>
+        <a href="#" class="btn-flat-simple1">
+          <i class="fa fa-caret-right1"></i> JETLIC Games Pages
+        </a>
+      </section>
+      <section id="5" class="top5">
+        <h1 class="top0 siro2">Contact</h1>
+        <p class="bol">Official SNS</p>
+        <a href="https://twitter.com/JETLIC3"><p>Twitter <span class="bod">@JETLIC3</span></p></a>
+        <a href="https://www.instagram.com/jetlic_official/"><p>Instagram <span class="bod">@JETLIC_official_teams</span></p></a>
+        <a href="https://jetlic.blogspot.com/"><p>Blogger</p></a>
+        <div class="a"></div>
+        <p class="bol">Contact us</p>
+        <p class="w">mail jetlicmail@gmail.com</p>
+        <a href="https://twitter.com/a66980429"><p>Twitter</p></a>
+        <div class="bb">©2021-JETLIC</div>
+        <p></p>
+      </section>
+      <script type="text/javascript">
+        
+//in case js in turned off
+   $(window).on('load', function () {
+        $("#header-scroll").removeClass("small")
+  });
+
+$(window).scroll(function () {
+     var sc = $(window).scrollTop()
+    if (sc > 1) {
+        $("#header-scroll").addClass("small")
+    } else {
+        $("#header-scroll").removeClass("small")
+    }
+});
+
+//scrollspy
+$(window).on('scroll', function () {
+   var sections = $('section')
+    , nav = $('nav')
+    , nav_height = nav.outerHeight()
+    , cur_pos = $(this).scrollTop();
+  sections.each(function() {
+    var top = $(this).offset().top - nav_height,
+        bottom = top + $(this).outerHeight();
+ 
+    if (cur_pos >= top && cur_pos <= bottom) {
+      nav.find('a').removeClass('active');
+      sections.removeClass('active');
+ 
+      $(this).addClass('active');
+      nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+    }
+  });
+});
+
+
+    </script>
+</body>
+</html>
