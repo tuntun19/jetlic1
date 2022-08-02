@@ -187,7 +187,7 @@ p{
     text-decoration: none;
     color: #696969;
     font-size: 14px;
-    background: #a3d2ca;
+    /* background: #a3d2ca; */
     transition: .4s;
   }
   
@@ -220,7 +220,7 @@ p{
     text-decoration: none;
     color: #696969;
     font-size: 14px;
-    background: #5eaaa8;
+    /* background: #5eaaa8; */
     transition: .4s;
   }
   
@@ -261,4 +261,10 @@ p{
 }
 .ab{
   color: #000;
+}
+@media (max-width:480px) {
+.top3{
+  height: 1200px;
+}
+  
 }
